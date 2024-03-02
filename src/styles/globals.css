@@ -2,32 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.App {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.Todo {
+  background-color: rgb(131, 155, 208);
+  text-align: center;
+  width: 50%;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: auto;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+ul {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+button {
+  width: 70px;
+  height: 35px;
+  background-color: aliceblue;
+  border: none;
+  font-size: 15px;
+  font-weight: 800;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.input {
+  border: none;
+  width: 340px;
+  height: 35px;
+  border-radius: 9px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.Top {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+li {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+}
+
+li:before {
+  content: "*";
+  margin-right: 5px;
 }
